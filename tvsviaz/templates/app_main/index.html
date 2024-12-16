@@ -1,0 +1,593 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Завод ТВ-Связь ~ Изготовление и монтаж металлоконструкций повышенной сложности ~ Опыт более 25 лет.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/svg+xml" href="{% static 'app_main/img/logo.svg' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="{% static 'app_main/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'app_main/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'app_main/node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+
+</head>
+
+<body>
+    <div id="preloader" class="fs-6">Загрузка...</div>
+    <div id="content" style="opacity:0;visibility:hidden;">
+
+        <nav class="navbar navbar-expand-lg fw-bold">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'app_main/img/logo.svg' %}" height="70" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                О заводе
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                <li><a class="dropdown-item" href="#">Новости</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="metalDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Металлоконструкции
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="metalDropdown">
+                                <li><a class="dropdown-item" href="#">Ангары</a></li>
+                                <li><a class="dropdown-item" href="#">Склады</a></li>
+                                <li><a class="dropdown-item" href="#">Металлические фермы</a></li>
+                                <li><a class="dropdown-item" href="#">Лестницы и ограждения</a></li>
+                                <li><a class="dropdown-item" href="#">Металлическая мебель</a></li>
+                                <li><a class="dropdown-item" href="#">Наблюдательные вышки</a></li>
+                                <li><a class="dropdown-item" href="#">Наружная реклама</a></li>
+                                <li><a class="dropdown-item" href="#">Закладные детали</a></li>
+                                <li><a class="dropdown-item" href="#">Сельхоз сооружения</a></li>
+                                <li><a class="dropdown-item" href="#">Паркинги</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Доставка</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Наши работы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+
+                    <span class="navbar-text me-3 phone-link">
+                        <a href="tel:+88002222358" class="text-white text-decoration-none">+7 (927) 288-05-85</a>
+                    </span>
+
+                    <a href="#" class="btn transmission-btn me-3">Трансляция</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="slider-section container-fluid d-flex flex-column align-items-start justify-content-center px-5">
+            <h1 class="display-4 mb-3">Завод по изготовлению металлоконструкций</h1>
+            <h3 class="mb-4">Создание любых металлоконструкций по вашим чертежам</h3>
+            <a id="greenBtn" class="custom-btn mt-5">Получить бесплатный расчёт</a>
+
+            <div class="info-cards-container d-flex justify-content-center w-100">
+                <div class="info-card">
+                    <img src="{% static 'app_main/img/1.svg' %}" alt="Иконка 1">
+                    <div>Собственное производство металлоконструкций</div>
+                </div>
+                <div class="info-card">
+                    <img src="{% static 'app_main/img/2.svg' %}" alt="Иконка 2">
+                    <div>Гарантии качества, низкой цены, сроков исполнения заказа</div>
+                </div>
+                <div class="info-card">
+                    <img src="{% static 'app_main/img/3.svg' %}" alt="Иконка 3">
+                    <div>Передовые технологии производства металлоконструкций</div>
+                </div>
+            </div>
+
+            <div class="m-1 fixedChat">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#Id1"
+                    aria-controls="Id1">
+                    Чат с ИИ для расчёта и поддержки
+                </button>
+
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="Id1">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">
+                            Backdrop with scrolling
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <p>Try scrolling the rest of the page to see this option in action.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center mt-4">
+            <div class="lineTextScroll"></div>
+        </div>
+
+        <div class="container px-5 mt-5">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-6 position-relative d-flex justify-content-center">
+                    <div class="image-container position-relative">
+                        <img src="{% static 'app_main/img/section_2_img1.webp' %}" alt="Основное изображение" class="img-fluid main-image">
+                        <div class="overlay"></div>
+                    </div>
+                    <img src="{% static 'app_main/img/section_2_img2.jpg' %}" alt="Плавающее изображение"
+                         class="img-fluid float-image position-absolute">
+                </div>
+                <div class="col-lg-6 text-column" style="font-style: italic">
+                    <h1 class="text-secondary mb-3 fs-4">От проектирования до монтажа любого уровня сложности</h1>
+                    <h5 class="text-secondary mb-3 fs-6">
+                        Наш завод предлагает свои услуги по изготовлению, доставке, монтажу/демонтажу
+                        металлоконструкций.
+                    </h5>
+                    <h5 class="text-secondary mb-3 fs-6">
+                        Современная технологическая база, квалифицированный персонал, свои монтажные бригады – всё это
+                        залог качественного и оперативного изготовления и монтажа.
+                    </h5>
+                    <h4 class="text-dark mb-3 fs-5">
+                        Особое внимание уделяется качеству сварочных процессов, контролируемых собственной лабораторией.
+                        Технология сварки, оборудование и сварщики аттестованы по НАКС.
+                    </h4>
+                    <h6 class="text-secondary mb-4 fs-6 mt-4 ">-Генеральный директор</h6>
+                    <button class="btn btn-dark text-white btn-lg custom-button mt-3">Подробнее о заводе</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 px-0">
+            <h1 class="text-secondary d-flex justify-content-center mb-5 fs-1">Изготавливаем металлоконструкции любой сложности</h1>
+            <div class="card-grid" style="font-style: italic">
+                <div class="card-custom">
+                    <img src="{% static 'app_main/img/section_3_img1.jpg' %}" alt="Image 1">
+                    <h2 class="mt-3">Ангары</h2>
+                    <h5 class="fs-6">Надёжные долговечные конструкции для складских, производственных и сельскохозяйственных целей.</h5>
+                    <div class="blur-effect"></div>
+                </div>
+                <div class="card-custom">
+                    <img src="{% static 'app_main/img/section_3_img1.jpg' %}" alt="Image 2">
+                    <h2 class="mt-3">Склады</h2>
+                    <h5 class="fs-6">Надёжное и функциональное решение для хранения товаров и ресурсов.</h5>
+                    <div class="blur-effect"></div>
+                </div>
+                <div class="card-custom">
+                    <img src="{% static 'app_main/img/section_3_img1.jpg' %}" alt="Image 3">
+                    <h2 class="mt-1">Металлические фермы</h2>
+                    <h5 class="fs-6">Несущие фермы для перекрытий и быстровозводимых сооружений.</h5>
+                    <div class="blur-effect"></div>
+                </div>
+                <div class="card-custom">
+                    <img src="{% static 'app_main/img/section_3_img1.jpg' %}" alt="Image 4">
+                    <h2 class="mt-1">Лестницы и ограждения</h2>
+                    <h5 class="fs-6">Промышленные лестницы и ограждения на заказ, включая пожарные.</h5>
+                    <div class="blur-effect"></div>
+                </div>
+                <div class="card-custom">
+                    <img src="{% static 'app_main/img/section_3_img1.jpg' %}" alt="Image 5">
+                    <h2 class="mt-1">Металлическая мебель</h2>
+                    <h5 class="fs-6">Промышленная металлическая мебель по ГОСТ.</h5>
+                    <div class="blur-effect"></div>
+                </div>
+                <div class="card-custom">
+                    <img src="{% static 'app_main/img/section_3_img1.jpg' %}" alt="Image 6">
+                    <h2 class="mt-1">Наблюдательные вышки</h2>
+                    <h5 class="fs-6">Высокое качество покраски и точность производства.</h5>
+                    <div class="blur-effect"></div>
+                </div>
+                <div class="card-custom">
+                    <img src="{% static 'app_main/img/section_3_img1.jpg' %}" alt="Image 7">
+                    <h2 class="mt-3">Рекламные щиты</h2>
+                    <h5 class="fs-6">Изготовление билбордов и металлокаркасов для наружной рекламы.</h5>
+                    <div class="blur-effect"></div>
+                </div>
+                <div class="card-custom">
+                    <img src="{% static 'app_main/img/section_3_img1.jpg' %}" alt="Image 8">
+                    <h2 class="mt-3">Закладные детали</h2>
+                    <h5 class="fs-6">Закладные детали по вашим чертежам.</h5>
+                    <div class="blur-effect"></div>
+                </div>
+                <div class="card-custom">
+                    <img src="{% static 'app_main/img/section_3_img1.jpg' %}" alt="Image 9">
+                    <h2 class="mt-3">Коровники, фермы</h2>
+                    <h5 class="fs-6">Металлоконструкции для фермерства и сельского хозяйства.</h5>
+                    <div class="blur-effect"></div>
+                </div>
+                <div class="card-custom">
+                    <img src="{% static 'app_main/img/section_3_img1.jpg' %}" alt="Image 10">
+                    <h2 class="mt-3">Паркинги</h2>
+                    <h5 class="fs-6">Оборудование для парковочных мест и многое другое.</h5>
+                    <div class="blur-effect"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-banner position-relative overflow-hidden mt-5">
+            <video class="video-background" autoplay loop muted playsinline>
+                <source src="{% static 'app_main/img/section_4_video.mp4' %}" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+            <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+            <div class="content video_content d-flex flex-row justify-content-center align-items-center position-absolute top-50 start-50 translate-middle">
+                <div class="youtube-icon mb-5 d-flex align-items-center">
+                    <img src="{% static 'app_main/img/section_4-youtube-logo-.svg' %}" alt="YouTube Icon">
+                </div>
+                <div class="text-overlay d-flex flex-column align-items-start w-100">
+                    <div class="text-line text-white">Изготавливаем любые</div>
+                    <div class="text-line text-white">металлоконструкции</div>
+                    <div class="text-line text-danger highlighted-text">
+                        <p class="ms-3">по вашим чертежам</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center mt-5">
+            <div class="lineTextScroll"></div>
+        </div>
+
+        <div class="metallo-magic container">
+            <div class="metallo-scroll column-gap-3">
+                <div class="metallo-card">
+                    <figure class="shape-box shape-box_half">
+                        <img src="{% static 'app_main/img/section_2_img1.webp' %}" alt="vishka" class="img-fluid">
+                        <div class="brk-abs-overlay z-index-0 opacity-60"></div>
+                        <figcaption>
+                            <div class="show-cont">
+                                <h3 class="card-no">01</h3>
+                                <h4 class="card-main-title">Design</h4>
+                            </div>
+                            <p class="card-content">Customer interactions, study and analysis...</p>
+                            <a href="#" class="read-more-btn">Read More</a>
+                        </figcaption>
+                        <span class="after"></span>
+                    </figure>
+                </div>
+                <div class="metallo-card">
+                    <figure class="shape-box shape-box_half">
+                        <img src="{% static 'app_main/img/section_2_img1.webp' %}" alt="vishka" class="img-fluid">
+                        <div class="brk-abs-overlay z-index-0 opacity-60"></div>
+                        <figcaption>
+                            <div class="show-cont">
+                                <h3 class="card-no">02</h3>
+                                <h4 class="card-main-title">Develop</h4>
+                            </div>
+                            <p class="card-content">Customer interactions, study and analysis...</p>
+                            <a href="#" class="read-more-btn">Read More</a>
+                        </figcaption>
+                        <span class="after"></span>
+                    </figure>
+                </div>
+                <div class="metallo-card">
+                    <figure class="shape-box shape-box_half">
+                        <img src="{% static 'app_main/img/section_2_img1.webp' %}" alt="vishka" class="img-fluid">
+                        <div class="brk-abs-overlay z-index-0 opacity-60"></div>
+                        <figcaption>
+                            <div class="show-cont">
+                                <h3 class="card-no">03</h3>
+                                <h4 class="card-main-title">Develop</h4>
+                            </div>
+                            <p class="card-content">Customer interactions, study and analysis...</p>
+                            <a href="#" class="read-more-btn">Read More</a>
+                        </figcaption>
+                        <span class="after"></span>
+                    </figure>
+                </div>
+                <div class="metallo-card">
+                    <figure class="shape-box shape-box_half">
+                        <img src="{% static 'app_main/img/section_2_img1.webp' %}" alt="vishka" class="img-fluid">
+                        <div class="brk-abs-overlay z-index-0 opacity-60"></div>
+                        <figcaption>
+                            <div class="show-cont">
+                                <h3 class="card-no">04</h3>
+                                <h4 class="card-main-title">Develop</h4>
+                            </div>
+                            <p class="card-content">Customer interactions, study and analysis...</p>
+                            <a href="#" class="read-more-btn">Read More</a>
+                        </figcaption>
+                        <span class="after"></span>
+                    </figure>
+                </div>
+                <div class="metallo-card">
+                    <figure class="shape-box shape-box_half">
+                        <img src="{% static 'app_main/img/section_2_img1.webp' %}" alt="vishka" class="img-fluid">
+                        <div class="brk-abs-overlay z-index-0 opacity-60"></div>
+                        <figcaption>
+                            <div class="show-cont">
+                                <h3 class="card-no">05</h3>
+                                <h4 class="card-main-title">Develop</h4>
+                            </div>
+                            <p class="card-content">Customer interactions, study and analysis...</p>
+                            <a href="#" class="read-more-btn">Read More</a>
+                        </figcaption>
+                        <span class="after"></span>
+                    </figure>
+                </div>
+                <div class="metallo-card">
+                    <figure class="shape-box shape-box_half">
+                        <img src="{% static 'app_main/img/section_2_img1.webp' %}" alt="vishka" class="img-fluid">
+                        <div class="brk-abs-overlay z-index-0 opacity-60"></div>
+                        <figcaption>
+                            <div class="show-cont">
+                                <h3 class="card-no">06</h3>
+                                <h4 class="card-main-title">Develop</h4>
+                            </div>
+                            <p class="card-content">Customer interactions, study and analysis...</p>
+                            <a href="#" class="read-more-btn">Read More</a>
+                        </figcaption>
+                        <span class="after"></span>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div id="metalSendBaium" class="container py-5 px-1 mb-5 text-secondary">
+            <h1 class="text-secondary d-flex justify-content-center mb-5 fs-1">Работа завода и строительство</h1>
+            <div class="row g-5">
+                <div class="col-md-6 left-blockBaium shadow-sm p-3">
+                    <div class="image-containerBaium">
+                        <h2 class="image-titleBaium">Заголовок</h2>
+                    </div>
+                    <div class="description-containerBaium row mt-3">
+                        <div class="col-12 col-sm-9">
+                            <h3 class="fs-6" id="descriptionBaium">
+                                «ТВСвязь» - это современная компания, выполняющая работы по строительству объектов связи
+                                и зданий из легковозводимых строительных конструкций. Работая на рынке более 30 лет,
+                                компания зарекомендовала себя как надежный и профессиональный партнер.
+                            </h3>
+                        </div>
+                        <div class="col-12 col-sm-3 d-flex justify-content-sm-end">
+                            <div id="staticPath" data-static-url="{% static 'app_main/img/image/' %}"></div>
+
+                            <button id="toggleTextBtnBaium"
+                                 class="expand-text-btnBaium btn mt-4"
+                                 data-img-src="{% static 'app_main/img/image/FreeSample-64.svg' %}">
+                                 <img src="{% static 'app_main/img/image/FreeSample-64.svg' %}" width="40" alt="clickMenu">
+                            </button>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 right-blockBaium">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 card-containerBaium">
+                        <!-- Карточки генерируются через JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center">
+            <span class="scrollText text-center"></span>
+        </div>
+
+        <div class="container py-5 mb-5">
+            <h1 class="text-secondary d-flex justify-content-center mb-5 fs-1">Отзывы наших клиентов</h1>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-3 col-md-6 d-flex flex-row gap-3 flex-lg-column">
+                    <div class="rectangle position-relative" data-index="0">
+                        <div class="svg-container"></div>
+                        <h3 class="caption mb-1 text-center"></h3>
+                    </div>
+                    <div class="rectangle position-relative" data-index="1">
+                        <div class="svg-container"></div>
+                        <h3 class="caption mb-1 text-center"></h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="review-slider border rounded shadow-lg p-4 bg-white">
+                        <button class="btn arrow arrow-left position-absolute translate-middle-y">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <button class="btn arrow arrow-right position-absolute translate-middle-y">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+
+                        <div class="review-content d-flex text-secondary">
+                            <div class="review-item d-flex align-items-center flex-wrap">
+                                <div class="review-text-wrapper flex-grow-1">
+                                    <h3 class="review-text fs-4 mb-3">Отличное качество!</h3>
+                                    <h4 class="review-text fs-6">Работаем уже 15 лет через тендр с этой компанией,
+                                        каждый обьект сдан в срок.</h4>
+                                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                </div>
+                                <img src="{% static 'app_main/img/section_5/client_1.jpg' %}" alt="Client 1" class="review-photo">
+                            </div>
+                            <div class="review-item d-flex flex-wrap align-items-center">
+                                <div class="review-text-wrapper flex-grow-1">
+                                    <h3 class="review-text fs-4 mb-3">Отличное качество!</h3>
+                                    <h4 class="review-text fs-6">Работаем уже 15 лет через тендр с этой компанией,
+                                        каждый обьект сдан в срок.</h4>
+                                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                </div>
+                                <img src="{% static 'app_main/img/section_5/client_2.jpg' %}" alt="Client 2" class="review-photo">
+                            </div>
+                            <div class="review-item d-flex flex-wrap align-items-center">
+                                <div class="review-text-wrapper flex-grow-1">
+                                    <h3 class="review-text fs-4 mb-3">Отличное качество!</h3>
+                                    <h4 class="review-text fs-6">Работаем уже 15 лет через тендр с этой компанией,
+                                        каждый обьект сдан в срок.</h4>
+                                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                </div>
+                                <img src="{% static 'app_main/img/section_5/client_3.jpg' %}" alt="Client 3" class="review-photo">
+                            </div>
+                        </div>
+
+                        <div class="review-indicator d-flex justify-content-center mt-5">
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex flex-row gap-3 flex-lg-column">
+                    <div class="rectangle position-relative ms-auto" data-index="2">
+                        <div class="svg-container"></div>
+                        <h3 class="caption mb-1 text-center"></h3>
+                    </div>
+                    <div class="rectangle position-relative ms-auto" data-index="3">
+                        <div class="svg-container"></div>
+                        <h3 class="caption mb-1 text-center"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer mb-5 mt-5 bg-white py-5 text-secondary">
+            <div class="container-fluid px-0 d-flex align-items-stretch">
+                <div class="row w-100 h-70 gy-4">
+                    <div class="col-lg-4 d-flex">
+                        <div class="left-block px-4 py-5 rounded shadow w-100">
+                            <a href="/" class="d-block mb-4">
+                                <img src="{% static 'app_main/img/logo.svg' %}" alt="Logo" class="img-fluid" style="max-width: 80px;">
+                            </a>
+                            <p class="small text-muted mb-3">© 1993 - 2024. Все права защищены.</p>
+                            <div class="mb-3">
+                                <a href="#" id="btnCalculate" class="btn btn-primary w-100 rounded-pill">Оставить заявку на расчет</a>
+                            </div>
+                            <div>
+                                <a href="#" id="btnInvite" class="btn btn-outline-primary w-100 rounded-pill">Пригласить на тендер</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 d-flex">
+                        <div class="menu-block px-4 py-5 rounded shadow w-100">
+                            <h5 class="text-uppercase mb-4 gy-5">Меню</h5>
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        О заводе
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                        <li><a class="dropdown-item" href="#">Новости</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="metalDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Металлоконструкции
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="metalDropdown">
+                                        <li><a class="dropdown-item" href="#">Ангары</a></li>
+                                        <li><a class="dropdown-item" href="#">Склады</a></li>
+                                        <li><a class="dropdown-item" href="#">Металлические фермы</a></li>
+                                        <li><a class="dropdown-item" href="#">Лестницы и ограждения</a></li>
+                                        <li><a class="dropdown-item" href="#">Металлическая мебель</a></li>
+                                        <li><a class="dropdown-item" href="#">Наблюдательные вышки</a></li>
+                                        <li><a class="dropdown-item" href="#">Наружная реклама</a></li>
+                                        <li><a class="dropdown-item" href="#">Закладные детали</a></li>
+                                        <li><a class="dropdown-item" href="#">Сельхоз сооружения</a></li>
+                                        <li><a class="dropdown-item" href="#">Паркинги</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Доставка</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Наши работы</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 d-flex">
+                        <div class="right-block px-4 py-5 rounded shadow w-100">
+                            <h5 class="text-uppercase mb-4">Контакты</h5>
+                            <ul class="list-unstyled text-muted">
+                                <li><strong>Режим работы:</strong> Пн-Пт 8:00-17:00</li>
+                                <li><strong>Email:</strong>
+                                    <a href="mailto:main@tvsviaz.ru" class="text-decoration-none text-secondary">main@tvsviaz.ru</a>
+                                </li>
+                                <li><strong>Адрес:</strong> Пензенская обл, г. Пенза, ул. Терешковой 7-а</li>
+                            </ul>
+                            <div class="mt-3">
+                                <a href="tel:88005555491" class="text-decoration-none text-secondary">+7 (927) 288-05-85 <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                            <div class="mt-3 transmission-btn">
+                                <a href="kontakty" class="btn btn-link text-decoration-none text-secondary">Все контакты
+                                    <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p class="mb-0 gradient-text">Anuchin A.M. 2024</p>
+                </div>
+            </div>
+        </footer>
+
+        <div class="modal fade" id="universalModal" tabindex="-1" aria-labelledby="universalModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="universalModalLabel">Contact Us</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formContact" class="form-container">
+                            <h3 class="text-center">Contact Us</h3>
+                            <div class="mb-3">
+                                <label for="inputName" class="form-label">Name</label>
+                                <input type="text" id="inputName" class="form-control" placeholder="Enter your name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputEmail" class="form-label">Email</label>
+                                <input type="email" id="inputEmail" class="form-control" placeholder="Enter your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputMessage" class="form-label">Message</label>
+                                <textarea id="inputMessage" class="form-control" placeholder="Your message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" id="btnSubmit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                        <div id="feedbackMessage" class="alert mt-3 d-none" role="alert"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'app_main/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script type="module" src="{% static 'app_main/js/script.js' %}"></script>
+
+</body>
+</html>

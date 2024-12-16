@@ -1,0 +1,1523 @@
+
+.content {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 0;
+}
+
+/* Исходный стиль шапки (в цвет фона слайдера) */
+nav.navbar {
+    position: fixed;
+    letter-spacing: 0.04rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    color: white;
+    z-index: 1000;
+    transition: background-color #fff, opacity 0.3s;
+
+}
+
+/* Стили для мобильной версии */
+.navbar-collapse {
+    padding-top: 20px;
+}
+
+nav.navbar.scrolled {
+    background-color: #ffffff;
+}
+
+/* Цвет текста и ссылок по умолчанию (в прозрачном состоянии шапки) */
+nav.navbar .nav-link,
+nav.navbar .navbar-text,
+nav.navbar .phone-link a {
+    color: #ffffff !important;
+}
+
+/* Цвет текста и ссылок при прокрутке */
+nav.navbar.scrolled .nav-link,
+nav.navbar.scrolled .navbar-text,
+nav.navbar.scrolled .phone-link a,
+nav.navbar.scrolled .dropdown-item {
+    color: #777777 !important;
+}
+
+/* Стиль для кнопки "Трансляция" */
+.transmission-btn {
+    color: #ffffff !important;
+    border: 2px solid red !important;
+    border-radius: 5px;
+    width: 180px;
+    padding: 0.375rem 0.75rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar-toggler {
+    margin-right: 15px;
+}
+
+
+nav.navbar.scrolled .transmission-btn {
+    color: #777777 !important;
+}
+
+
+
+/* Выпадающее меню */
+.dropdown-menu {
+    background-color: #777777;
+}
+
+.dropdown-item {
+    color: #ffffff;
+}
+
+.dropdown-item:hover {
+    background-color: #555;
+}
+
+/* Интерактивный телефон */
+.phone-link:before {
+    content: "\260E";
+    color: red;
+    font-size: 30px;
+    margin-right: 5px;
+    display: inline-block;
+    animation: ring-animation 1s ease-in-out infinite;
+}
+
+/* Анимация для имитации звонка */
+@keyframes ring-animation {
+    0% {
+        transform: rotate(0deg);
+        /* Начальная позиция */
+    }
+
+    25% {
+        transform: rotate(5deg);
+        /* Легкий наклон в одну сторону */
+    }
+
+    50% {
+        transform: rotate(0deg);
+        /* Восстановление до исходного состояния */
+    }
+
+    75% {
+        transform: rotate(-5deg);
+        /* Легкий наклон в другую сторону */
+    }
+
+    100% {
+        transform: rotate(0deg);
+        /* Возврат в исходное положение */
+    }
+}
+
+
+
+
+
+
+
+/* Основной стиль для фона слайдера */
+.slider-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
+    background-size: cover;
+    background-position: center;
+    animation: slideAnimation 15s infinite;
+}
+
+.slider-section h1,
+.slider-section h3,
+.slider-section .custom-btn,
+.slider-section .info-cards-container {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: white;
+
+    z-index: 2;
+}
+
+.slider-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+
+
+/* Анимация для плавного увеличения */
+@keyframes slideAnimation {
+    0%, 100% {
+        background-image: url("../img/Сварочные-работы.webp");
+
+    }
+    30% {
+        background-image: url("../img/Power-line-tower.jpg");
+    }
+    40% {
+        background-image: url("../img/slyder.jpg");
+
+    }
+}
+
+
+/* Полупрозрачная зелёная кнопка */
+.custom-btn {
+    background-color: rgba(0, 128, 0, 0.6);
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    max-width: 350px;
+    height: 60px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.custom-btn:hover {
+    background-color: rgba(0, 128, 0, 0.5);
+}
+
+/* Полупрозрачные карточки */
+.info-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    transition: background-color 0.3s;
+}
+
+
+
+.info-card:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.info-card img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Контейнер для нижних карточек */
+.info-cards-container {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    gap: 0px;
+    transform: translateX(-4px);
+    margin-left: -40px;
+}
+
+.info-card:nth-child(2) {
+    background-color: rgba(0, 0, 128, 0.5);
+}
+
+.info-card:nth-child(2):hover {
+    background-color: rgba(0, 0, 128, 0.7);
+}
+
+
+
+
+/* Контейнер для первой картинки */
+.image-container {
+    position: relative;
+    width: 580px;
+    height: 650px;
+    margin-left: auto;
+}
+
+/* Основная картинка */
+.image-container .main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    /* Легкое затемнение */
+    border: none;
+}
+
+/* Оверлей */
+.image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.float-image {
+    width: 450px;
+    height: 350px;
+    position: absolute;
+    top: 30%;
+    left: -150px;
+    transform: translateY(-150px);
+    border: 4px solid #ffffff;
+    z-index: 10;
+    transition: transform 3s ease-out;
+}
+
+
+/* Смещение при скролле */
+.float-image.scrolled {
+    transform: translateY(50px);
+}
+
+/* Начальная картинка с затемнением */
+.image-container .main-image {
+    filter: brightness(0.9);
+    border: none;
+}
+
+.image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Текстовая колонка */
+.text-column h1,
+.text-column h5 {
+    color: #6c757d;
+    line-height: 1.3;
+}
+
+.text-column h4 {
+    color: #343a40;
+    line-height: 1.3;
+}
+
+.custom-button {
+    padding: 0.75rem 1.5rem;
+}
+
+
+
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(338px, 1fr));
+    gap: 30px;
+    cursor: pointer;
+
+}
+
+.card-custom {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-custom img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    transition: filter 0.3s ease, transform 4s ease;
+}
+
+.card-custom h2 {
+    position: absolute;
+    top: 10%;
+    left: 20px;
+    left: 7%;
+    color: red;
+    font-size: 1.5rem;
+    margin: 0;
+    padding-left: 10px;  
+    padding-right: 10px; 
+
+}
+
+.card-custom h5 {
+    position: absolute;
+    top: 40%;
+    font-weight: 350;
+    left: 20px;  
+    color: white;
+    margin: 0;
+    padding-left: 10px;  
+    padding-right: 10px; 
+
+}
+
+.card-custom:hover {
+    transform: scale(1.05);
+}
+
+.card-custom:hover img {
+    filter: brightness(0.9);
+    transform: scale(1.2);
+}
+
+/* Стилизация эффекта размытия */
+.blur-effect {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+
+
+
+/* Видео контейнер */
+/* Основные стили для видео-баннера */
+.video-banner {
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.lineTextScroll {
+    position: relative; /* Устанавливаем позиционирующий контекст */
+    width: 100%;
+    height: 50px;
+    overflow: hidden; /* Скрытие лишнего */
+}
+
+.lineTextScroll::after {
+    content: '← Прокрутите →';
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: #999;
+    animation: fadeInOut 3s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* Фон для видео, чтобы оно занимало весь контейнер */
+.video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Полупрозрачный слой для затемнения */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Стиль для контента */
+.video_content {
+    z-index: 10;
+}
+
+
+/* Стиль для текстового слоя */
+.text-overlay {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    text-align: left;
+    z-index: 10;
+    width: 100%;
+    margin-right: -30rem;
+}
+
+/* Стиль для каждой строки текста */
+.text-line {
+    position: relative;
+    padding: 0.2em 0;
+    padding-left: 20px;
+}
+
+/* Красная полоса слева от текста */
+.text-line::before {
+    content: '  ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 8px;
+    background-color: red;
+}
+
+/* Выделенный текст в конце */
+.highlighted-text {
+    background-color: white;
+    padding: 0 5px;
+    color: red;
+    display: block;
+    width: 70vw;
+    box-sizing: border-box;
+    position: relative;
+    right: 0;
+    margin-bottom: 100px;
+}
+
+/* Псевдоэлемент для нижней красной полосы */
+.highlighted-text::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: red;
+    border-radius: 2px;
+}
+
+/* Выравнивание значка и текста в строку */
+.youtube-icon {
+    margin-right: 50px;
+    display: inline-flex;
+    align-items: center;
+}
+
+
+/* Значок YouTube */
+.youtube-icon img {
+    width: 11rem;
+    height: auto;
+    margin-bottom: 3rem;
+}
+
+
+.video_content {
+    z-index: 10;
+}
+
+
+.text-center {
+    color: #8991ae;
+}
+
+.rectangle {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 210px;
+}
+
+.svg-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: all 1.5s ease;
+}
+
+.caption {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+
+/* окно отзывов */
+.review-slider {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, white, rgb(232, 229, 229));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Окно отзывов с фиксированными границами */
+.review-content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.review-item.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+}
+
+.review-item.prev,
+.review-item.next {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+
+
+.review-photo {
+    width: 250px;
+    height: 150px;
+   
+    border-radius: 3px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.review-photo:hover {
+    transform: scale(1.05);
+}
+
+
+
+.review-text-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.review-stars {
+    font-size: 1.5rem;
+    color: #FFD700;
+}
+
+
+/* Основной стиль кнопок */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(48, 48, 50, 0.666);
+    border-radius: 20%;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+    transition: box-shadow 1s ease, transform 0.2s ease;
+    outline: none;
+}
+
+/* Увеличение при наведении */
+.arrow:hover {
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.9);
+    transform: scale(1.1);
+}
+
+/* Эффект нажатия */
+.arrow:active {
+    transform: scale(0.95);
+    background: rgba(230, 57, 70, 0.8);
+}
+
+/* Левая кнопка */
+.arrow.arrow-left {
+    left: 20px;
+    margin-top: 120px;
+}
+
+/* Правая кнопка */
+.arrow.arrow-right {
+    right: 20px;
+    margin-top: 120px;
+
+}
+
+
+/* Эффект свечения */
+.arrow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.arrow:hover::before {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.review-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.indicator {
+    width: 100px;
+    height: 5px;
+    background: #bbb;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.indicator.active {
+    background: linear-gradient(90deg, #8991ea, #8991ae);
+    transform: scale(1.2);
+}
+
+.footer {
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+/* Левый, центральный и правый блоки */
+.left-block,
+.menu-block,
+.right-block {
+    background: linear-gradient(135deg, white, rgb(232, 229, 229));
+    border: 1px solid #e3e9f5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.left-block:hover,
+.menu-block:hover,
+.right-block:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Кнопки */
+.btn-primary {
+    background: linear-gradient(90deg, #979ea7e6, #6a6d71);
+    border: none;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #979ea7e6, #6a6d71);
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.6);
+}
+
+
+
+.btn-outline-primary:hover {
+    background: linear-gradient(90deg, #979ea7e6, #6a6d71);
+    color: #fff;
+}
+
+.gradient-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #c9c9fb, #c9c6c8, #faffd8);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s infinite ease;
+}
+
+/* Анимация для перелива */
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Левый блок */
+.left-blockBaium .image-containerBaium {
+    width: 100%;
+    height: 400px;
+    background-color: #e9ecef;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-image: url("../img/image/svarka_zavod.gif");
+}
+
+.left-blockBaium .image-containerBaium:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.image-titleBaium {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(10px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+.image-containerBaium:hover .image-titleBaium{  
+    opacity: 1;
+    transform: translateY(0); /* Возвращаем на место */
+
+}
+
+.description-containerBaium h3 {
+    max-height: 50px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.expand-text-btnBaium {
+    display: block;
+    color: #007bff;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.expand-text-btnBaium img {
+  transition: transform 0.3s ease;
+}
+
+.expand-text-btnBaium img:hover {
+  transform: scale(1.2);
+}
+
+/* Карточки */
+/* Карточки */
+.card-containerBaium .cardBaium {
+    height: 270px; /* Сохраняем оригинальную высоту */
+    background-color: #f8f9fa;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    padding: 1rem;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    filter: brightness(100%);
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    position: relative;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.12);
+}
+
+.cardBaium::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.cardBaium img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-contentBaium {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 65%; 
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    z-index: 1;
+    overflow: hidden; 
+}
+
+.card-contentBaium .card-titleBaium {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #292b2c;
+    margin: 0;
+    margin-bottom: 0.3rem;
+}
+
+.card-contentBaium .card-descriptionBaium {
+    color: #9f9f9f;
+    margin-top: 20px;
+    font-size: 0.7rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 7; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-contentBaium .read-more-btn {
+    border: 2px solid #db3236;
+    font-size: 14px;
+    padding: 10px 20px;
+    display: inline-block;
+    background: #db3236;
+    color: #fff;
+    border-radius: 2px;
+    margin-top: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.card-contentBaium .read-more-btn:hover {
+    background: transparent;
+    color: #db3236;
+}
+
+.cardBaium:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardBaium:hover .card-contentBaium {
+    transform: translateY(0);
+}
+
+
+
+/* Затемнение фона */
+.overlayBaium {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Увеличенный блок */
+.enlargedBaium {
+    width: 55rem;
+    height: 35rem;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: white;
+    box-shadow: 0 4px 16px rgba(112, 106, 106, 0.8);
+    overflow-y: auto;
+    /* Добавляем скроллинг для длинного контента */
+    padding: 20px;
+    /* Внутренние отступы */
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Кнопка закрытия */
+.close-buttonBaium {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: grey;
+    cursor: pointer;
+}
+
+
+  /* Кнопки переключения */
+  .prev-buttonBaium, .next-buttonBaium {
+    position: absolute;
+    width: 50px;
+    top: 40%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    user-select: none; 
+  }
+
+  .prev-buttonBaium {
+    left: 10px; 
+  }
+  
+
+  .next-buttonBaium {
+    right: 10px; 
+  }
+  
+  .prev-buttonBaium:hover, .next-buttonBaium:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Темный фон при наведении */
+  }
+  
+
+.leftArrowBlock, .rightArrowBlock {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: gray;
+  cursor: pointer;
+  background: transparent; /* Убираем фон */
+  perspective: 50px;
+}
+.leftArrowBlock {
+    transform: rotate(23deg);
+}
+.rightArrowBlock {
+    transform: rotate(-23deg);
+}
+.leftArrowBlock:hover, .rightArrowBlock:hover {
+  color: #ddd;
+}
+
+.leftArrowBlock:hover {
+    transform: scale(1.8) rotate(-20deg); /* Уменьшаем размер на 20% и вращаем на -20 градусов */
+  }
+  
+  .rightArrowBlock:hover {
+    transform: scale(1.8) rotate(20deg); /* Уменьшаем размер на 20% и вращаем на 20 градусов */
+  }
+
+
+
+ .card-sectionSly {
+    padding: 20px;
+    overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+.cardSly {
+    position: relative;
+    width: 360px;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardSly:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-imgSly {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-bodySly {
+    padding: 15px;
+}
+
+.btnSly {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.btnSly:hover {
+    opacity: 0.6;
+}
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+
+
+.metallo-magic {
+    height: 100vh; 
+    overflow: hidden;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.metallo-scroll {
+    display: flex;
+    transition: transform 0.3s ease;
+    width: fit-content;
+    overflow-x: visible;
+    padding-right: 0;
+    padding-left: 1000px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.metallo-card {
+    flex: 0 0 auto;
+    width: 370px;
+    position: relative;
+    text-align: center;
+}
+
+.metallo-card .shape-box {
+    position: relative;
+    overflow: hidden;
+    max-width: 370px;
+    height: 430px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s ease;
+}
+
+.metallo-card .shape-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: skewY(53.5deg);
+    transform-origin: top left;
+    transition: transform 0.4s;
+    background: #fff;
+    z-index: 1;
+}
+
+.metallo-card .shape-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.metallo-card .shape-box .brk-abs-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.metallo-card .shape-box figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    z-index: 3;
+}
+
+.metallo-card .shape-box figcaption .show-cont {
+    position: absolute;
+    bottom: calc(100% + 30px);
+    left: 30px;
+    right: 30px;
+    transition: bottom 0.4s ease;
+}
+
+.metallo-card .shape-box .card-no {
+    font-size: 36px;
+    color: red;
+    margin: 10px 0;
+}
+
+.metallo-card .shape-box .card-main-title {
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #292b2c;
+}
+
+.metallo-card .shape-box .card-content {
+    color: #9f9f9f;
+    margin-top: 20px;
+    line-height: 22px;
+    font-size: 15px;
+}
+
+.metallo-card .shape-box .read-more-btn {
+    border: 2px solid #db3236;
+    font-size: 14px;
+    padding: 10px 20px;
+    display: inline-block;
+    background: #db3236;
+    color: #fff;
+    border-radius: 2px;
+    margin-top: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.metallo-card .shape-box .read-more-btn:hover {
+    background: transparent;
+    color: #db3236;
+}
+
+.metallo-card .shape-box .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(90deg, #b8bec6e6, #5e6064);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.metallo-card .shape-box:hover:before {
+    transform: skewY(20deg);
+}
+
+.metallo-card .shape-box:hover figcaption {
+    transform: translateY(0);
+}
+
+.metallo-card .shape-box:hover figcaption .show-cont {
+    bottom: 100%;
+}
+
+.metallo-card .shape-box:hover .after {
+    opacity: 1;
+}
+
+
+
+.metallo-magic::after {
+    content: '← Прокрутите →';
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: #999;
+    animation: fadeInOut 3s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.fixedChat {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 1005; 
+}
+
+.scrollText {
+    display: inline-block; /* Можно использовать встраиваемое позиционирование */
+}
+
+
+
+.form-container {
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+#feedbackMessage {
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
+/* Уменьшение текста и элементов в навбаре для экранов до 1024px */
+@media (max-width: 1240px) {
+
+    .navbar .nav-link,
+    .navbar .navbar-text,
+    .phone-link a {
+        font-size: 0.75rem;
+    }
+
+    .transmission-btn {
+        width: 140px;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        border-radius: 12px 0 0 0;
+    }
+
+    .navbar-brand img {
+        height: 4rem;
+    }
+
+    .dropdown-item {
+        font-size: 0.75rem;
+    }
+
+    .phone-link:before {
+        font-size: 15px;
+        margin-right: 3px;
+    }
+
+    .video_content {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: -10rem; 
+    }
+    .metallo-scroll {
+        padding-left: 1500px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .video_content {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .text-overlay {
+        margin-right: -1rem;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+
+    .youtube-icon img {
+        width: 8rem;
+        height: auto;
+    }
+
+    .highlighted-text {
+        font-size: 1.2rem;
+    }
+
+    
+}
+
+@media (max-width: 837px) {
+
+    .info-cards-container {
+        display: flex;
+        justify-content: center; 
+    }
+
+    .info-card {
+        width: 65%; 
+        max-width: none; 
+        padding: 0.5rem; 
+        font-size: 0.9rem; 
+    }
+
+    .info-card img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .metallo-scroll {
+        padding-left: 1700px;
+    }
+
+}
+
+@media (max-width: 670px) {
+
+    .info-card {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        max-width: 70%;
+    }
+
+    .info-cards-container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .metallo-scroll {
+        padding-left: 1770px;
+    }
+
+}
+
+@media (max-width: 574px) {
+
+    .slider-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .info-card {
+        display: none;
+    }
+
+    .custom-btn {
+        background-color: rgba(0, 128, 0, 0.6);
+        color: #ffffff;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.8rem;
+        border-radius: 15px;
+        max-width: 350px;
+        height: 55px;
+        top: 50px;
+        transition: background-color 0.3s;
+        margin-bottom: 20px;
+    }
+
+    .custom-btn:hover {
+        background-color: rgba(0, 128, 0, 0.5);
+    }
+
+    .metallo-scroll {
+        padding-left: 1800px;
+    }
+}
+
+/* Дополнительные стили для экранов до 477px */
+@media (max-width: 477px) {
+
+    .youtube-icon img {
+        width: 5rem;
+        margin-left: 1rem;
+    }
+
+    .text-overlay {
+        font-size: 0.9rem;
+        margin-right: 1rem;
+    }
+
+    .highlighted-text {
+        font-size: 1rem;
+    }
+
+    .text-line::before {
+        width: 5px;
+    }
+
+    .highlighted-text::after {
+        height: 5px;
+    }
+
+    .metallo-scroll {
+        padding-left: 1901px;
+    }
+}
+
+
+
+.footer.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
